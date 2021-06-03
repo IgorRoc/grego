@@ -1,6 +1,10 @@
 let darkMode = 1
 const root = document.querySelector(":root")
 const toggle = document.getElementById("toggleDarkMode")
+const sun = document.getElementById("sun")
+const moon = document.getElementById("moon")
+const table = document.getElementsByTagName("tr")
+
 const changes = [
 	{
 		// ? White Mode
@@ -9,9 +13,9 @@ const changes = [
 		"--text-color": "#000",
 		"--subtext-color": "#949494",
 		"--btntext-color": "#fff",
-        
+
 		"--table-division": "#70707011",
-        
+
 		"--cards-bg": "linear-gradient(90deg, #fff6e8, #FFFDF7)",
 		"--cards-shadow": "10px 10px 30px #25252517, -3px -3px 60px #ff02",
 
@@ -47,6 +51,12 @@ function toggleDarkMode() {
 	for (const key in changes[darkMode]) {
 		document.documentElement.style.setProperty(key, changes[darkMode][key])
 	}
-    toggle.children[0].classList.toggle("displaynone")
-    toggle.children[1].classList.toggle("displaynone")
+	for (const key in table) {
+		if (table[key].nodeType == 1)
+			console.log(
+				table[key].children[0].children[0].classList.toggle("invert")
+			)
+	}
+	sun.classList.toggle("displaynone")
+	moon.classList.toggle("displaynone")
 }
