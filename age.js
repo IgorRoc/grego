@@ -53,7 +53,7 @@ function getAge(dateString) {
 
 	if (age.years > 1) yearString = " anos"
 	else yearString = " ano"
-	if (age.months > 1) monthString = " mêses"
+	if (age.months > 1) monthString = " meses"
 	else monthString = " mês"
 	if (age.days > 1) dayString = " dias"
 	else dayString = " dia"
