@@ -161,6 +161,21 @@ main a {
 	height: 500px;
 }
 
+#toggleDarkMode {
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+}
+
+#toggleDarkMode *{
+	position: absolute;
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+	filter: drop-shadow(2px 3px 5px #222);
+}
+
 /* --------------- */
 .icon {
 	width: 1rem;
@@ -172,15 +187,19 @@ main a {
 	filter: invert(1);
 }
 
+.displaynone{
+	display: none;
+}
+
 .hoverEffect {
 	box-shadow: var(--hover1-shadow);
 	background: var(--hover-bg);
-    background-position: 0% 0%;
-    background-size: 100% 100%;
-	transition: all .5s ease;
+	background-position: 0% 0%;
+	background-size: 100% 100%;
+	transition: all 0.5s ease;
 }
 
 .hoverEffect:hover {
 	box-shadow: var(--hover2-shadow);
-    background-position: -100% 0%;
+	background-position: -100% 0%;
 }

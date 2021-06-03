@@ -40,7 +40,7 @@
 				<tr>
 					<td>
 						<img src="./assets/calendar.svg" class="icon" /> Data de
-						Nascimento
+						Adoção
 					</td>
 					<td>04/10/2019</td>
 				</tr>
@@ -112,7 +112,16 @@
 			<h2>Minha casa</h2>
 			<div id="map"></div>
 		</div>
-		<script src="./script.js"></script>
+		<div id="toggleDarkMode" onclick="toggleDarkMode()">
+			<img src="./assets/sun.svg" style="transform: scale(0.8)" />
+			<img
+				src="./assets/moon.svg"
+				class="displaynone"
+				style="transform: scale(0.6)"
+			/>
+		</div>
+		<!-- SCRIPTS -->
+		<script src="./darkmode.js"></script>
 		<script src="./age.js"></script>
 		<script src="./map.js"></script>
 		<script
