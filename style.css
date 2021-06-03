@@ -234,17 +234,16 @@ main a::after {
 	background-position: -100% 0%;
 }
 
-
 /* * RESPONSIVE */
-@media (max-width:500px) {
+@media (max-width: 500px) {
 	body {
 		font-size: 15px;
 	}
-	main a{
+	main a {
 		width: 50%;
 		padding-bottom: 50px;
 	}
-	main a::after{
+	main a::after {
 		width: 30px;
 		height: 30px;
 		margin: 0;
@@ -253,8 +252,14 @@ main a::after {
 	}
 }
 
-@media (max-width:350px) {
+@media (max-width: 350px) {
 	body {
 		font-size: 10px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#toggleDarkMode {
+		left: calc(515px + 50%);
 	}
 }
