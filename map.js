@@ -15,3 +15,11 @@ function initMap() {
 		map: map,
 	})
 }
+
+window.addEventListener("load", () => {
+	var script = document.createElement("script")
+	script.src =
+		"https://maps.googleapis.com/maps/api/js?key=AIzaSyAGntsHV52y3LxLWvOopyNOnuLgZY-9kiw&callback=initMap&libraries=&v=weekly"
+	script.async = true
+	document.getElementsByTagName("head")[0].appendChild(script)
+})
