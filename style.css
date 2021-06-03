@@ -5,37 +5,54 @@
 	padding: 0;
 }
 
+:root{
+    --bg-color: linear-gradient(90deg, #fff6e8, #fffde8);
+    --primary-color: #5a62cc;
+    --text-color: #000;
+    --subtext-color: #949494;
+    --btntext-color: #fff;
+    --cards-bg-color: #fff;
+    --cards-shadow-color: #0002;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
-	background: linear-gradient(90deg, #fff6e8, #fffde8);
+	background: var(--bg-color);
 }
 
-main {
+.card {
 	display: flex;
 	flex-direction: column;
 	width: 90%;
+    max-width: 900px;
 	margin: 50px auto;
 	padding: 50px 0;
 	align-items: center;
-	background-color: #fff;
+	background-color: var(--cards-bg-color);
 	border-radius: 20px;
-	box-shadow: 0 0 20px #0002;
+	box-shadow: 0 0 20px var(--cards-shadow-color);
 }
 
 main img {
 	width: 200px;
 	border-radius: 50%;
-	border: 8px solid #5a62cc;
+	border: 8px solid var(--primary-color);
 }
 
 main .nome {
-	text-align: center;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 	margin: 30px 0;
 }
 
 main h3 {
-	color: rgb(148, 148, 148);
+	color: var(--subtext-color);
 }
 
 main a {
@@ -46,22 +63,10 @@ main a {
     text-align: center;
 	border: none;
     border-radius: 10px;
-	background-color: #5a62cc;
-	color: #fff;
+	background-color: var(--primary-color);
+	color: var(--btntext-color);
 	padding: 20px 30px;
 	width: 80%;
-}
-
-.info {
-	display: flex;
-	flex-direction: column;
-	width: 90%;
-	margin: 50px auto;
-	padding: 50px 0;
-	align-items: center;
-	background-color: #fff;
-	border-radius: 20px;
-	box-shadow: 0 0 20px #0002;
 }
 
 .info h2 {
@@ -84,27 +89,15 @@ main a {
 }
 
 .info table tr td:nth-child(odd) {
-	color: #8f8f8f
+	color: var(--subtext-color);
 }
 
 .info table tr td:nth-child(even) {
 	text-align: right;
 }
 
-.parentes {
-	display: flex;
-	flex-direction: column;
-	width: 90%;
-	margin: 50px auto;
-	padding: 50px 0;
-	align-items: center;
-	background-color: #fff;
-	border-radius: 20px;
-	box-shadow: 0 0 20px #0002;
-}
-
 .parentes h2 {
-	font-size: 2rem;
+    font-size: 2rem;
     margin-bottom: 30px;
 }
 
@@ -130,11 +123,11 @@ main a {
 
 .parentes .parente .nome h4{
     font-weight: 500;
-    color: #8f8f8f;
+    color: var(--subtext-color);
 }
 
 .parentes .parente a{
-    background-color: #5a62cc;
+    background-color: var(--primary-color);
     width: 50px;
     border-radius: 10px;
     margin-left: 2px;
@@ -149,6 +142,17 @@ main a {
 
 .parentes .parente a img{
     width: 50%;
+}
+
+.mapa h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+#map{
+    background-color: #5a62cc42;
+    width: 90%;
+    height: 500px;
 }
 
 /* --------------- */
