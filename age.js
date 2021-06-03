@@ -59,33 +59,21 @@ function getAge(dateString) {
 	else dayString = " dia"
 
 	if (age.years > 0 && age.months > 0 && age.days > 0)
-		ageString =
-			age.years +
-			yearString +
-			" e " +
-			age.months +
-			monthString +
-			"."
+		ageString = age.years + yearString + " e " + age.months + monthString
 	else if (age.years == 0 && age.months == 0 && age.days > 0)
 		ageString = "Apenas " + age.days + dayString + "!"
 	else if (age.years > 0 && age.months == 0 && age.days == 0)
 		ageString = age.years + yearString + ". Dê os parabéns a grego!!"
 	else if (age.years > 0 && age.months > 0 && age.days == 0)
 		ageString =
-			age.years +
-			yearString +
-			" e " +
-			age.months +
-			monthString +
-			"."
+			age.years + yearString + " e " + age.months + monthString
 	else if (age.years == 0 && age.months > 0 && age.days > 0)
 		ageString =
-			age.months + monthString + " e " + age.days + dayString + "."
+			age.months + monthString + " e " + age.days + dayString
 	else if (age.years > 0 && age.months == 0 && age.days > 0)
-		ageString =
-			age.years + yearString + " e " + age.days + dayString + "."
+		ageString = age.years + yearString + " e " + age.days + dayString
 	else if (age.years == 0 && age.months > 0 && age.days == 0)
-		ageString = age.months + monthString + "."
+		ageString = age.months + monthString
 	else ageString = "Oops! Não foi possível calcular a idade!"
 
 	return ageString
