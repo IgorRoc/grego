@@ -5,57 +5,106 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Grego o Gato</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="shortcut icon"
+			href="./assets/pawprint_full.svg"
+			type="image/x-icon"
+		/>
 	</head>
 	<body>
 		<main class="header">
-			<img src="./assets/grego.jpg" alt="" />
-			<h1>Grego</h1>
-			<h3>SRD</h3>
-			<button>Entrar em contato</button>
+			<img src="./assets/grego.png" alt="" />
+			<div class="nome">
+				<h1>Grego</h1>
+				<h3>SRD</h3>
+			</div>
+			<a href="#parentes">
+				Entrar em contato
+				<img
+					class="icon invert"
+					src="./assets/next.svg"
+					style="transform: rotate(90deg)"
+				/>
+			</a>
 		</main>
 		<div class="info">
+			<h2>Informações do Pet</h2>
 			<table>
-				<tbody>
-					Informações do Pet
-				</tbody>
 				<tr>
-					<th>Espécie</th>
-					<th>Cachorro</th>
+					<td>
+						<img src="./assets/pawprint.svg" class="icon" /> Espécie
+					</td>
+					<td>Gato</td>
 				</tr>
 				<tr>
-					<th>Idade</th>
-					<th>1 ano</th>
+					<td>
+						<img src="./assets/calendar.svg" class="icon" /> Data de Nascimento
+					</td>
+					<td>04/10/2019</td>
 				</tr>
 				<tr>
-					<th>Gênero</th>
-					<th>Macho</th>
+					<td>
+						<img src="./assets/hourglass.svg" class="icon" /> Idade
+					</td>
+					<td id="idade">1 ano</td>
 				</tr>
 				<tr>
-					<th>Castrado</th>
-					<th>Sim</th>
+					<td><img src="./assets/sex.svg" class="icon" /> Gênero</td>
+					<td>Macho</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="./assets/veterinary.svg" class="icon" />
+						Castrado
+					</td>
+					<td>Sim</td>
 				</tr>
 			</table>
 		</div>
-		<div class="parentes">
+		<div class="parentes" id="parentes">
 			<h2>Parentes</h2>
-			<div id="gra">
-				<img src="" alt="" />
+			<div id="gra" class="parente">
+				<img src="./assets/gra.jpg" alt="" />
 				<div class="nome">
 					<h3>Graziella Rocha</h3>
 					<h4>Mãe</h4>
 				</div>
-				<a href="tel:+"><img class="icon" src="./assets/phone.svg" alt="Telefone" /></a>
-				<a href=""><img class="icon" src="./assets/whatsapp.svg" alt="WhatsApp" /></a>
+				<a href="tel:+557388089557"
+					><img
+						class="invert"
+						src="./assets/phone.svg"
+						alt="Telefone"
+				/></a>
+				<a
+					href="https://api.whatsapp.com/send?phone=5573988089557&text=Achei%20seu%20gato!"
+					><img
+						class="invert"
+						src="./assets/whatsapp.svg"
+						alt="WhatsApp"
+				/></a>
 			</div>
-            <div id="igor">
-				<img src="" alt="" />
+			<div id="igor" class="parente">
+				<img src="./assets/igor.jpg" alt="" />
 				<div class="nome">
 					<h3>Igor Rocha</h3>
 					<h4>Primo</h4>
 				</div>
-				<a href="tel:+"><img class="icon" src="./assets/phone.svg" alt="Telefone" /></a>
-				<a href=""><img class="icon" src="./assets/whatsapp.svg" alt="WhatsApp" /></a>
+				<a href="tel:+5573988089810"
+					><img
+						class="invert"
+						src="./assets/phone.svg"
+						alt="Telefone"
+				/></a>
+				<a
+					href="https://api.whatsapp.com/send?phone=5573988089810&text=Achei%20seu%20gato!"
+					><img
+						class="invert"
+						src="./assets/whatsapp.svg"
+						alt="WhatsApp"
+				/></a>
 			</div>
 		</div>
+		<script src="./script.js"></script>
 	</body>
 </html>
