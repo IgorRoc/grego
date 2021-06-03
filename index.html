@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Grego o Gato</title>
+		<title>Grego - O Gato</title>
 		<link rel="stylesheet" href="style.css" />
 		<link
 			rel="shortcut icon"
@@ -13,7 +13,7 @@
 		/>
 	</head>
 	<body>
-		<main class="header">
+		<main class="header card">
 			<img src="./assets/grego.png" alt="" />
 			<div class="nome">
 				<h1>Grego</h1>
@@ -28,7 +28,7 @@
 				/>
 			</a>
 		</main>
-		<div class="info">
+		<div class="info card">
 			<h2>Informações do Pet</h2>
 			<table>
 				<tr>
@@ -39,7 +39,8 @@
 				</tr>
 				<tr>
 					<td>
-						<img src="./assets/calendar.svg" class="icon" /> Data de Nascimento
+						<img src="./assets/calendar.svg" class="icon" /> Data de
+						Nascimento
 					</td>
 					<td>04/10/2019</td>
 				</tr>
@@ -62,7 +63,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="parentes" id="parentes">
+		<div class="parentes card" id="parentes">
 			<h2>Parentes</h2>
 			<div id="gra" class="parente">
 				<img src="./assets/gra.jpg" alt="" />
@@ -105,6 +106,16 @@
 				/></a>
 			</div>
 		</div>
+		<div class="mapa card">
+			<h2>Minha casa</h2>
+			<div id="map"></div>
+		</div>
 		<script src="./script.js"></script>
+		<script src="./age.js"></script>
+		<script src="./map.js"></script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGntsHV52y3LxLWvOopyNOnuLgZY-9kiw&callback=initMap&libraries=&v=weekly"
+			async
+		></script>
 	</body>
 </html>
