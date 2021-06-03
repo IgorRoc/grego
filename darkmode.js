@@ -4,7 +4,6 @@ const toggle = document.getElementById("toggleDarkMode")
 const sun = document.getElementById("sun")
 const moon = document.getElementById("moon")
 const table = document.getElementsByTagName("tr")
-
 const changes = [
 	{
 		// ? White Mode
@@ -46,16 +45,40 @@ const changes = [
 	},
 ]
 
+if (getCookie("isDark") == "false") {
+	toggleDarkMode()
+}
+
+function getCookie(name) {
+	// Split cookie string and get all individual name=value pairs in an array
+	var cookieArr = document.cookie.split(";")
+	// Loop through the array elements
+	for (var i = 0; i < cookieArr.length; i++) {
+		var cookiePair = cookieArr[i].split("=")
+
+		/* Removing whitespace at the beginning of the cookie name
+        and compare it with the given string */
+		if (name == cookiePair[0].trim()) {
+			// Decode the cookie value and return
+			return decodeURIComponent(cookiePair[1])
+		}
+	}
+
+	// Return null if not found
+	return null
+}
+
 function toggleDarkMode() {
 	darkMode = darkMode ? 0 : 1
+
+	document.cookie = `isDark=${darkMode ? "true" : "false"};`
+
 	for (const key in changes[darkMode]) {
 		document.documentElement.style.setProperty(key, changes[darkMode][key])
 	}
 	for (const key in table) {
 		if (table[key].nodeType == 1)
-			console.log(
-				table[key].children[0].children[0].classList.toggle("invert")
-			)
+			table[key].children[0].children[0].classList.toggle("invert")
 	}
 	sun.classList.toggle("displaynone")
 	moon.classList.toggle("displaynone")
