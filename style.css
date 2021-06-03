@@ -5,37 +5,43 @@
 	padding: 0;
 }
 
-:root{
-    --bg-color: linear-gradient(90deg, #fff6e8, #fffde8);
-    --primary-color: #5a62cc;
-    --text-color: #000;
-    --subtext-color: #949494;
-    --btntext-color: #fff;
-    --cards-bg-color: #fff;
-    --cards-shadow-color: #0002;
+:root {
+	--bg-color: #2b2b2b;
+	--primary-color: #32b68a;
+	--text-color: #ffffff;
+	--subtext-color: #757575;
+	--btntext-color: #fff;
+	--table-division: #70707011;
+	--cards-bg: linear-gradient(145deg, #272727, #2e2e2e);
+	--cards-shadow: inset 20px 20px 60px #252525, inset -20px -20px 60px #313131;
+
+	--hover-bg: linear-gradient(90deg, #32b68a, #13805b);
+	--hover1-shadow: 5px 5px 10px #0005, -5px -5px 10px #fff1;
+	--hover2-shadow: inset 5px 5px 10px #0005, inset -5px -5px 10px #fff1;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+	scroll-behavior: smooth;
 }
 
 body {
 	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
 	background: var(--bg-color);
+	color: var(--text-color);
 }
 
 .card {
 	display: flex;
 	flex-direction: column;
 	width: 90%;
-    max-width: 900px;
+	max-width: 900px;
 	margin: 50px auto;
 	padding: 50px 0;
 	align-items: center;
-	background-color: var(--cards-bg-color);
 	border-radius: 20px;
-	box-shadow: 0 0 20px var(--cards-shadow-color);
+	background: var(--cards-bg);
+	box-shadow: var(--cards-shadow);
 }
 
 main img {
@@ -46,8 +52,8 @@ main img {
 
 main .nome {
 	display: flex;
-    flex-direction: column;
-    align-items: center;
+	flex-direction: column;
+	align-items: center;
 	margin: 30px 0;
 }
 
@@ -59,10 +65,10 @@ main a {
 	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 	font-size: 1rem;
-    text-decoration: none;
-    text-align: center;
+	text-decoration: none;
+	text-align: center;
 	border: none;
-    border-radius: 10px;
+	border-radius: 10px;
 	background-color: var(--primary-color);
 	color: var(--btntext-color);
 	padding: 20px 30px;
@@ -71,13 +77,13 @@ main a {
 
 .info h2 {
 	font-size: 2rem;
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .info table {
 	width: 90%;
 	font-weight: 600;
-    border-spacing: 0;
+	border-spacing: 0;
 }
 
 .info table tr td {
@@ -85,7 +91,7 @@ main a {
 }
 
 .info table tr:nth-child(even) {
-	background-color: #e8e8e84b;
+	background-color: var(--table-division);
 }
 
 .info table tr td:nth-child(odd) {
@@ -97,62 +103,62 @@ main a {
 }
 
 .parentes h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+	font-size: 2rem;
+	margin-bottom: 30px;
 }
 
 .parentes .parente {
 	width: 90%;
-    display: flex;
-    margin: 10px 0;
+	display: flex;
+	margin: 10px 0;
 }
 
 .parentes .parente > img {
 	width: 50px;
 	height: 50px;
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
-.parentes .parente .nome{
-    margin: 0 10px;
+.parentes .parente .nome {
+	margin: 0 10px;
 }
 
-.parentes .parente .nome h3{
-    font-weight: 600;
+.parentes .parente .nome h3 {
+	font-weight: 600;
 }
 
-.parentes .parente .nome h4{
-    font-weight: 500;
-    color: var(--subtext-color);
+.parentes .parente .nome h4 {
+	font-weight: 500;
+	color: var(--subtext-color);
 }
 
-.parentes .parente a{
-    background-color: var(--primary-color);
-    width: 50px;
-    border-radius: 10px;
-    margin-left: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.parentes .parente a {
+	background-color: var(--primary-color);
+	width: 50px;
+	border-radius: 10px;
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.parentes .parente a:first-of-type{
-    margin-left: auto;
+.parentes .parente a:first-of-type {
+	margin-left: auto;
 }
 
-.parentes .parente a img{
-    width: 50%;
+.parentes .parente a img {
+	width: 50%;
 }
 
-.mapa h2{
-    font-size: 2rem;
-    margin-bottom: 30px;
+.mapa h2 {
+	font-size: 2rem;
+	margin-bottom: 30px;
 }
 
-#map{
-    background-color: #5a62cc42;
-    width: 90%;
-    height: 500px;
+#map {
+	background-color: #5a62cc42;
+	width: 90%;
+	height: 500px;
 }
 
 /* --------------- */
@@ -162,6 +168,19 @@ main a {
 	border: none;
 }
 
-.invert{
-    filter: invert(1);
+.invert {
+	filter: invert(1);
+}
+
+.hoverEffect {
+	box-shadow: var(--hover1-shadow);
+	background: var(--hover-bg);
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+	transition: all .5s ease;
+}
+
+.hoverEffect:hover {
+	box-shadow: var(--hover2-shadow);
+    background-position: -100% 0%;
 }
